@@ -1,0 +1,125 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #c0ccad;
+}
+h1, h2, p {
+    margin: 0;
+}
+h1{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    white-space: normal;
+    padding: 10px;
+    white-space: nowrap;
+}
+/* Center the box and add some padding */
+.box {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #e2ebd8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Style the form container and input */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.results{
+    text-align: center;
+    margin: 1% 1%;
+}
+/* Style the Analyze button */
+.button-29 {
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button-29:hover {
+    background-color: #FF0000;
+}
+/* Style the alert message */
+.alert {
+    display: none;
+    color: red;
+    margin: 2% 1%;
+    font-size: 15px;
+}
+.hidden {
+    display: none;
+}
+/* Style the results section */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 40px;
+}
+h3 {
+    margin-top: 40px;
+    text-align: center;
+}
+/* Style the comments box */
+.comments-box {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    text-align: left;
+    background-color: #64784f;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.comments-box::-webkit-scrollbar {
+    width: 10px;
+}
+.comments-box::-webkit-scrollbar-track {
+    background: #c0ccad;
+    border-radius: 10px;
+}
+.comments-box::-webkit-scrollbar-thumb {
+    background: #2d4b12;
+    border-radius: 10px;
+}
+.comments-box::-webkit-scrollbar-thumb:hover {
+    background: #2d4b12;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #768764;
+    margin-top: 40px;
+}
+.comments p {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #E2EBD8;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #e2ebd8;
+}
+button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+button:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}

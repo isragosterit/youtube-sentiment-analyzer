@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>YouTube Comment Sentiment Analyzer</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="box">
+      <h1>YouTube Comment Sentiment Analyzer</h1>
+      <p>Enter the ID of a YouTube video to analyze its comments:</p>
+      <form method="POST">
+        <div class="container">
+          <input type="text" name="video_id">
+          <button type="submit" class="button-29">Analyze</button>
+        </div>
+        <div class="alert hidden">Please enter an ID.</div>
+        {% if error_message %}
+        <div class="alert">{{ error_message }}</div>
+    {% endif %}
+      </form>
+    </div> {% if comments %}
+    <hr>
+    <h3>Results for video "{{ video_title }}":</h3>
+    <div class="results">
+        <p>Number of comments: {{ num_comments }}</p>
+        <p>Number of positive comments: {{ num_positive }} ({{ percent_positive }}%)</p>
+        <p>Number of negative comments: {{ num_negative }} ({{ percent_negative }}%)</p>
+        <p>Number of neutral comments: {{ num_neutral }} ({{ percent_neutral }}%)</p>
+      </div>
+      <hr>
+      <div class="comments-box">
+        <div class="comments"> {% for comment in comments %} <p>{{ comment }}</p> {% endfor %} </div>
+      </div> {% for comment in comments %} {% endfor %} {% endif %}
+  </body>
+  <script>
+    const comments = [];
+  
+    function addComment(comment) {
+      comments.push(comment);
+      const commentsHTML = comments.reduce((html, comment) => {
+        return `${html}<p>${comment}</p>`;
+      }, "");
+      document.querySelector(".comments").innerHTML = commentsHTML;
+      document.querySelector(".comments-box").style.display = "block";
+    }
+  
+    const form = document.querySelector('form');
+    const input = document.querySelector('input');
+    const alertMessage = document.querySelector('.alert');
+    
+    form.addEventListener('submit', function(event) {
+      if (input.value.trim() === '') {
+        event.preventDefault();
+        alertMessage.style.display = 'block'; // Show the alert
+      } else {
+        alertMessage.style.display = 'none'; // Hide the alert
+      }
+    });
+  </script>
+</html>
