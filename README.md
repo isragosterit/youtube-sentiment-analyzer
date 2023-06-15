@@ -1,4 +1,4 @@
-# youtube-sentiment-analysis
+# youtube-sentiment-analyzer
 Youtube Sentiment Analyzer
 
 A web application that performs sentiment analysis on YouTube comments using the YouTube Data API and TextBlob.
@@ -33,3 +33,5 @@ textblob==0.15.3
 ## Limitations
 - The YouTube Data API has rate limits for API requests, so there may be restrictions on the number of comments that can be analyzed within a certain timeframe.
 - The sentiment analysis is based on TextBlob's sentiment scoring, which may not capture the nuances of certain languages or specific contexts.
+- The YouTube Sentiment Analyzer does not analyze the replies to comments. It focuses only on analyzing the sentiment of the original comments and does not extend the analysis to the replies received.
+- Analyzing videos with a large number of comments can be excessively slow due to the processing requirements.
