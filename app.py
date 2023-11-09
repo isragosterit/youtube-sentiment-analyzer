@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from textblob import TextBlob
 
-DEVELOPER_KEY = "ENTER_YOUR_DEVELOPER_KEY"
+DEVELOPER_KEY = "AIzaSyBjXI7DHqtD3qyvJt6sxvegSIzVCkYKxos"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
